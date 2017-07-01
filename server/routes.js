@@ -1,14 +1,16 @@
 'use strict';
 
+require('dotenv').config()
+
 const Spotify = require('spotify-web-api-node');
 const querystring = require('querystring');
 const express = require('express');
 const router = new express.Router();
 
 // configure the express server
-const CLIENT_ID = process.env.client_id;
-const CLIENT_SECRET = process.env.client_secret;
-const REDIRECT_URI = process.env.redirect_uri || 'http://localhost:3000/callback';
+const CLIENT_ID = process.env.CLIENT_ID;
+const CLIENT_SECRET = process.env.CLIENT_SECRET;
+const REDIRECT_URI = process.env.REDIRECT_URI || 'http://localhost:3000/callback';
 const STATE_KEY = 'spotify_auth_state';
 // your application requests authorization
 const scopes = ['user-read-private', 'user-read-email'];

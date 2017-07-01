@@ -17,13 +17,13 @@
       }
     },
     "start": {
-      "command": "node --harmony_destructuring server/app.js",
+      "command": "node --harmony_destructuring_assignment server/app.js",
       "env": {
         "NODE_ENV": "production"
       }
     },
     "dev": {
-      "command": "node --harmony_destructuring server/app.js",
+      "command": "node --harmony_destructuring_assignment server/app.js",
       "env": {
         "NODE_ENV": "development"
       }
@@ -35,6 +35,7 @@
     "body-parser": "^1.14.2",
     "clone": "^1.0.2",
     "cookie-parser": "^1.4.1",
+    "dotenv": "^4.0.0",
     "eslint": "^1.10.3",
     "eslint-config-airbnb": "^1.0.2",
     "eslint-plugin-react": "^3.16.1",
